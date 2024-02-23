@@ -22,3 +22,21 @@ In the first tutorial, the HelloWorld Component is created.
     - Use commands `mv HelloWorld.template.hpp HelloWorld.hpp` and `mv HelloWorld.template.cpp HelloWorld.cpp` to overwrite the previous c++ files.
 
 4. Certain specific details are added to both `.hpp` and `.cpp` files which are implementation-specific.
+
+### Creating a Deployment
+
+A deployment is the actual executable within which all the components run. To create it:
+
+1. Run command `fprime-util new --deployment` and input the desired parameters
+
+2. Add the components that you want. This is done by adding the component to the topology in `<nameOfDeployment>/Top/topology.fpp`, which instantiates and links together the components in the system.
+    - Most of the time, those connections are made automatically
+    - Done by adding to the list with `instance <nameOfInstance>`
+
+    - We also have to add the instance to the deployment, by creating a statement inside `<deploymentName>/Top/instances.fpp`
+
+3. New telemetry channel should be added to telemetry packet specification. Basically we have to say that we have a new channel of data coming through to gds. This will involve the file `<deploymentName>/Top/<deploymentName>DeploymentPackets.xml`
+
+4. Ensure that everything builds, by running `fprime-util build -j4` inside of the `<projectName>/<deploymentName>Deployment` directory
+
+### Running with `fprime-gds`
