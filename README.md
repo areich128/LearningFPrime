@@ -40,3 +40,10 @@ A deployment is the actual executable within which all the components run. To cr
 4. Ensure that everything builds, by running `fprime-util build -j4` inside of the `<projectName>/<deploymentName>Deployment` directory
 
 ### Running with `fprime-gds`
+
+This seems relatively simple, but I'm still unsure of how it works with uplink/downlink systems. For now, 
+
+1. Go into the deployment directory and run `fprime-gds`
+2. A website should open, or if not navigate to `http://127.0.0.1:5000`. Check for a green dot in the upper right. If there is a red X, go to the `logs` tab and look for errors.
+
+You should be able to send commands, along with view logs etc. from this webpage. Thats it!
