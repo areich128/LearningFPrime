@@ -9,6 +9,8 @@ I am using this project as a way to learn the FPrime system and topology on a de
 
 Following JPL's tutorials, I will learn how to create Components, learn how they interact and get more familiar with the groundstation architecture as well.
 
+## HelloWorld Tutorial
+
 ### Creating a Component
 
 In the first tutorial, the HelloWorld Component is created. 
@@ -47,3 +49,14 @@ This seems relatively simple, but I'm still unsure of how it works with uplink/d
 2. A website should open, or if not navigate to `http://127.0.0.1:5000`. Check for a green dot in the upper right. If there is a red X, go to the `logs` tab and look for errors.
 
 You should be able to send commands, along with view logs etc. from this webpage. Thats it!
+
+## Math Types Tutorial
+
+### Defining Types
+
+Type definitions define kinds of data that you can pass between components (telemetry data, commands etc.). For this tutorial, its a math operation named `MathOp`.
+
+Basically, all you need to do is add a folder in the main directory with a `.fpp` file and a `CMakeLists.txt` file. 
+- Then, once you add the CMake file to the general `project.cmake`, do your classic `fprime-util purge`, `fprime-util generate`, and `fprime-util build` to make sure that everything builds properly.
+
+### Defining Ports
