@@ -60,3 +60,10 @@ Basically, all you need to do is add a folder in the main directory with a `.fpp
 - Then, once you add the CMake file to the general `project.cmake`, do your classic `fprime-util purge`, `fprime-util generate`, and `fprime-util build` to make sure that everything builds properly.
 
 ### Defining Ports
+
+First, we create a new directory, where we make a `.fpp` file to hold the port definitions. Inside `module MathModule{}` we define the two ports:
+- `port OpRequest` to request an operation on two numbers 
+- `port MathResult` to send back the result. 
+
+Inside of these we define the data types that will be sent along with our own defined Types in `\Types`.
+
